@@ -23,13 +23,12 @@ createApp({
         texts: ['Mangiare la pizza', 'Studiare VueJs', 'Mangiare il gelato'],
         done: [true, false],
       },
+      doneItem: null,
     };
   },
   methods: {
-    doneItem() {
-      if (this.done === true) {
-        this.texts.length == strike().this.texts;
-      }
+    clickX() {
+      console.log('click su x');
     },
   },
 }).mount('#app');
