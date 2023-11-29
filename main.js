@@ -19,16 +19,28 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
-      list: {
-        texts: ['Mangiare la pizza', 'Studiare VueJs', 'Mangiare il gelato'],
-        done: [true, false],
-      },
-      doneItem: null,
+      todos: [
+        {
+          text: 'Mangiare la pizza',
+          done: true,
+        },
+
+        {
+          text: 'Studiare VueJs',
+          done: false,
+        },
+
+        {
+          text: 'Mangiare il gelato',
+          done: true,
+        },
+      ],
     };
   },
+
   methods: {
-    clickX() {
-      console.log('click su x');
+    checkDone(check) {
+      if (check === true) return 'text-decoration-line-through';
     },
   },
 }).mount('#app');
