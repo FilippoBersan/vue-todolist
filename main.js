@@ -42,5 +42,9 @@ createApp({
     checkDone(check) {
       if (check === true) return 'text-decoration-line-through';
     },
+
+    removeToDo(index) {
+      this.todos.splice(index, 1);
+    },
   },
 }).mount('#app');
